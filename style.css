@@ -399,6 +399,11 @@ nav ul li {
     border-radius: 50%;
 
 }
+#carouselFarm {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
 #carouselFarm .w-100{
     border-bottom-left-radius:30px ;
 }
