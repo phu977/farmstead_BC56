@@ -39,7 +39,11 @@ header.main-header {
 }
 
 .navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 0;
 }
 
 .navbar-expand-lg .navbar-nav {
@@ -50,10 +54,10 @@ header.main-header {
 }
 
 .navbar .navbar-brand {
-    font-size: 35px;
-    position: relative;
+    font-size: 32px;
     padding: 0;
     color: #fb811e;
+    position: relative;
 }
 
 #myBody .nav-fixed .navbar-brand {
@@ -119,9 +123,10 @@ input[type=search]:focus {
 #switchButton {
     border: none;
     padding: 0px;
-    width: 35px;
-    height: 35px;
-    margin: 0 10px;
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    padding: 0;
     transition: all .5s;
     cursor: pointer;
     z-index: 0;
@@ -286,16 +291,14 @@ nav ul li {
 
 /* carousel */
 /* carousel left */
+.carousel__left {
+    position: absolute;
+    left: 10em;
+    z-index: 1;
+}
 .carousel__content__left {
     padding: 3em 2em 2em 4em;
     border-radius: 8px;
-}
-
-.carousel__left {
-    position: absolute;
-    top: 2em;
-    left: 10em;
-    z-index: 1;
 }
 
 .farm-text {
