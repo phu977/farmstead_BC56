@@ -106,7 +106,7 @@ header.main-header {
 /* When the input field gets focus, change its width to 100% */
 input[type=search]:focus {
     width: 200px;
-    padding-left: 20px;
+    padding-left: 32px;
     color: #000;
     border-color: white;
     background-color: #fff;
@@ -290,6 +290,9 @@ nav ul li {
 
 
 /* carousel */
+.carousel{
+    margin: 0;
+}
 /* carousel left */
 .carousel__left {
     position: absolute;
@@ -387,7 +390,7 @@ nav ul li {
 
 /* feature */
 .feature {
-    margin: 20px 20px;
+    margin: 30px 10px;
     padding: 20px;
     z-index: 2;
 }
@@ -456,6 +459,7 @@ nav ul li {
     display: block;
     color: #000;
     text-decoration: none;
+    transition: all .75s;
 }
 
 .feature__item a:hover {
@@ -465,7 +469,7 @@ nav ul li {
 /* service */
 .service {
     background-color: #009f4d;
-    padding: 30px 20px;
+    
 }
 
 .service__title .row {
