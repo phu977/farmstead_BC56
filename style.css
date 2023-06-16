@@ -9,14 +9,6 @@ html {
     font-family: 'Source Sans 3', sans-serif;
 }
 
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 #myBody {
     background-color: white;
 }
@@ -37,7 +29,6 @@ header.main-header {
     height: 90px;
     display: grid;
     align-items: center;
-    /* box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05); */
 }
 
 #myBody .nav-fixed {
@@ -103,6 +94,7 @@ header.main-header {
     transition: all .5s;
     cursor: pointer;
 }
+
 .search-right input[type=search]:hover {
     background-color: #fff;
 }
@@ -110,7 +102,7 @@ header.main-header {
 /* When the input field gets focus, change its width to 100% */
 input[type=search]:focus {
     width: 200px;
-    padding-left: 32px;
+    padding-left: 20px;
     color: #000;
     border-color: white;
     background-color: #fff;
@@ -126,10 +118,10 @@ input[type=search]:focus {
 
 #switchButton {
     border: none;
-    padding: 0 10px;
+    padding: 0px;
     width: 35px;
     height: 35px;
-    margin: 0 20px;
+    margin: 0 10px;
     transition: all .5s;
     cursor: pointer;
     z-index: 0;
@@ -269,13 +261,36 @@ nav ul li {
     color: #fb811e;
 }
 
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .container {
+        min-width: 960px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
+
+
 /* carousel */
 /* carousel left */
 .carousel__content__left {
-    position: relative;
     padding: 3em 2em 2em 4em;
     border-radius: 8px;
 }
+
 .carousel__left {
     position: absolute;
     top: 2em;
@@ -330,6 +345,7 @@ nav ul li {
 /* carousel right */
 .carousel-item {
     position: relative;
+    z-index: -1;
 }
 
 #carouselFarm .carousel-indicators li {
@@ -357,6 +373,13 @@ nav ul li {
 #carouselFarm .carousel-indicators .active {
     background-color: #fb811e;
 
+}
+
+@media screen and (min-width:768px) {
+    .col-md-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+    }
 }
 
 /* feature */
