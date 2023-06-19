@@ -6,7 +6,8 @@
 
 body,
 html {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+
 }
 
 #myBody {
@@ -39,7 +40,6 @@ header.main-header {
 }
 
 .navbar {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -212,7 +212,6 @@ input[type="checkbox"] {
 #menu label {
     position: relative;
     display: block;
-    /* transition: background 0.3s; */
     cursor: pointer;
     text-align: center;
     margin: 0;
@@ -226,7 +225,6 @@ input[type="checkbox"] {
     background: #fff;
     background-color: #fff;
     transition: max-height 0.5s ease-out;
-    /* border: 1px solid black; */
     position: absolute;
     min-width: 8em;
     right: 0;
@@ -290,15 +288,18 @@ nav ul li {
 
 
 /* carousel */
-.carousel{
+.carousel {
     margin: 0;
 }
+
 /* carousel left */
 .carousel__left {
     position: absolute;
+    top: 2em;
     left: 10em;
     z-index: 1;
 }
+
 .carousel__content__left {
     padding: 3em 2em 2em 4em;
     border-radius: 8px;
@@ -316,7 +317,7 @@ nav ul li {
 
 .carousel__content {
     position: absolute;
-    top: 130px;
+    top: 140px;
     left: 20px;
 }
 
@@ -469,7 +470,7 @@ nav ul li {
 /* service */
 .service {
     background-color: #009f4d;
-    
+
 }
 
 .service__title .row {
