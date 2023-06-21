@@ -151,32 +151,6 @@ input[type=search]:focus {
     color: #fb811e;
 }
 
-/* Dark Theme*/
-.dark#myBody {
-    background-color: black;
-}
-
-.dark #switchButton {
-    border: none;
-}
-
-.dark #switchButton .fa-sun {
-    display: block;
-    font-size: 25px;
-    color: white;
-}
-
-.dark #switchButton .fa-moon {
-    display: none;
-}
-
-.dark .card {
-    background-color: black;
-    color: white;
-}
-
-/* /Dark theme */
-
 /*  menu */
 #menu {
     padding: 0;
@@ -190,12 +164,14 @@ ul {
 }
 
 #menu label span {
-    line-height: 2em;
+    margin-left: 10px;
+    line-height: 1em;
     color: white;
 
 }
 
 #myBody .nav-fixed label span {
+    line-height: 1em;
     color: #000;
 }
 
@@ -222,7 +198,6 @@ input[type="checkbox"] {
     padding: 0;
     overflow: hidden;
     list-style-type: none;
-    background: #fff;
     background-color: #fff;
     transition: max-height 0.5s ease-out;
     position: absolute;
@@ -257,7 +232,7 @@ nav ul li {
 .submenu li a {
     color: #000;
     text-decoration: none;
-    transition: all .5s;
+    transition: all .75s;
 }
 
 .submenu li a:hover {
@@ -439,11 +414,13 @@ nav ul li {
     text-align: center;
     box-shadow: 0 1rem 3rem #00000008;
     background-color: #fff;
+    transition: all .75s;
+
 }
 
-.feature__right .feature__item:hover {
+.feature__right .feature__item:hover { 
     transition: all .3s;
-    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 20%);
 }
 
 .feature__item .icon img {
@@ -543,8 +520,122 @@ nav ul li {
     font-weight: 600;
     color: #000;
     margin: 15px 0;
+    transition: all .75s;
 }
 
 .service-details h5 a:hover {
     color: #009f4d;
 }
+
+/* Dark Theme*/
+.dark#myBody {
+    background-color: #222222;
+}
+.dark#myBody .nav-fixed {
+    z-index: 99;
+    background-color:#222222;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+    height: 70px;
+}
+.dark#myBody .nav-fixed .navbar-brand {
+    color: white;
+}
+.dark #switchButton {
+    border: none;
+}
+
+.dark #switchButton .fa-sun {
+    display: block;
+    font-size: 25px;
+    color: white;
+}
+
+.dark #switchButton .fa-moon {
+    display: none;
+}
+.dark#myBody .nav-fixed label span {
+    line-height: 1em;
+    color: white;
+}
+.dark .submenu {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    background-color:#222222;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+    min-width: 8em;
+    right: 0;
+    box-shadow: 0 20px 62px rgba(4, 20, 69, .1);
+}
+.dark .submenu li a {
+    color: #fdfffc;
+    text-decoration: none;
+    transition: all .75s;
+}
+.dark .submenu li a:hover {
+    color: #fb811e;
+}
+.dark .card {
+    background-color: black;
+    color: white;
+}
+.dark .farm-text {
+    color: #000;
+}
+.dark .carousel__content h3 {
+    color: #fdfffc;
+}
+.dark .carousel__content p{
+    color: #b7b7ae;
+}
+.dark .feature__left .large__title {
+    color: #eee;
+}
+.dark .feature__left p{
+    color: #b7b7ae;
+}
+.dark .feature__right .feature__item{
+    padding: 40px 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 1rem 3rem #00000008;
+    background-color: #222222;
+    transition: all .75s;
+}
+.dark .feature__right .feature__item:hover {
+    transition: all .3s;
+    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 20%);
+}
+.dark .feature__item a {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-top: 25px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: all .75s;
+}
+.dark .feature__item a:hover {
+    color: #009f4d;
+    
+}
+.dark .service-details h5 a {
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    color:#fdfffc;
+    margin: 15px 0;
+    transition: all .75s;
+}
+.dark .service-details h5 a:hover {
+    color: #009f4d;
+}
+.dark .service-details p {
+    color: #b7b7ae;
+}
+/* /Dark theme */
