@@ -7,6 +7,8 @@
 body,
 html {
     font-family: 'Source Sans Pro', sans-serif;
+    color: #212529;
+    text-align: left;
 
 }
 
@@ -62,6 +64,13 @@ header.main-header {
     position: relative;
 }
 
+.navbar .navbar-brand i {
+    position: absolute;
+    top: -10px;
+    left: 55px;
+    font-size: 20px;
+}
+
 #myBody .nav-fixed .navbar-brand {
     color: #000;
 }
@@ -72,14 +81,6 @@ header.main-header {
     right: 0;
     left: 0;
     z-index: 1039;
-}
-
-.navbar .navbar-brand i {
-    position: absolute;
-    top: -10px;
-    left: 55px;
-    font-size: 20px;
-
 }
 
 /* search */
@@ -272,7 +273,6 @@ nav ul li {
 /* carousel left */
 .carousel__left {
     position: absolute;
-    top: 2em;
     left: 10em;
     z-index: 1;
 }
@@ -282,20 +282,17 @@ nav ul li {
     border-radius: 8px;
 }
 
-.farm-text {
-    position: absolute;
-    left: 20px;
+.carousel__content__left .farm-text {
     color: #f4f4f4;
     font-size: 120px;
     font-weight: bold;
     margin-left: -0.5em;
+    margin-bottom: 0;
 
 }
 
-.carousel__content {
-    position: absolute;
-    top: 140px;
-    left: 20px;
+.carousel__content__left .carousel__content {
+    margin-top: -40px;
 }
 
 .carousel__content h3 {
@@ -304,7 +301,7 @@ nav ul li {
     font-weight: bold
 }
 
-.carousel__text {
+p.carousel__text {
     font-size: 20px;
 }
 
@@ -344,13 +341,22 @@ nav ul li {
     left: 0;
     width: 100%;
     height: 100%;
-    border-bottom-left-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.26);
     opacity: 1;
 }
 
 #carouselFarm img {
-    border-bottom-left-radius: 30px;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    background-size: cover;
+    min-height: 100vh;
 
 }
 
@@ -359,10 +365,99 @@ nav ul li {
 
 }
 
-@media screen and (min-width:768px) {
-    .col-md-5 {
-        flex: 0 0 41.66667%;
-        max-width: 41.66667%;
+@media screen and (max-width:1440px) {
+    .carousel__left {
+        left: 8em;
+    }
+
+    .carousel__content h3 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .farm-text {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .carousel__left {
+        left: 5em;
+    }
+
+    p.carousel__text {
+        font-size: 17px;
+    }
+
+    .carousel__content h3 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .carousel__content__left h2 {
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .carousel__left {
+        left: 2em;
+    }
+
+    .carousel__content h3 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .carousel__content__left h2 {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel__left {
+        left: 0em;
+        padding: 2em;
+    }
+
+    .carousel__content__left {
+        background: #fff;
+        padding: 3em 2em 2em 4em;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .carousel__content h3 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .carousel__content__left h2 {
+        font-size: 70px;
+    }
+
+    p.carousel__text {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel__content__left {
+        padding: 2.5em 2em 2em 2.5em;
+    }
+
+    .carousel__content__left h2 {
+        font-size: 60px;
+    }
+
+    .carousel__content h3 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .carousel__left {
+        padding: 1em;
     }
 }
 
@@ -420,7 +515,7 @@ nav ul li {
 
 }
 
-.feature__right .feature__item:hover { 
+.feature__right .feature__item:hover {
     transition: all .3s;
     box-shadow: 0 25px 98px 0 rgb(0 0 0 / 20%);
 }
@@ -533,15 +628,18 @@ nav ul li {
 .dark#myBody {
     background-color: #222222;
 }
+
 .dark#myBody .nav-fixed {
     z-index: 99;
-    background-color:#222222;
+    background-color: #222222;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
     height: 70px;
 }
+
 .dark#myBody .nav-fixed .navbar-brand {
     color: white;
 }
+
 .dark #switchButton {
     border: none;
 }
@@ -555,50 +653,61 @@ nav ul li {
 .dark #switchButton .fa-moon {
     display: none;
 }
+
 .dark#myBody .nav-fixed label span {
     line-height: 1em;
     color: white;
 }
+
 .dark .submenu {
     max-height: 0;
     padding: 0;
     overflow: hidden;
     list-style-type: none;
-    background-color:#222222;
+    background-color: #222222;
     transition: max-height 0.5s ease-out;
     position: absolute;
     min-width: 8em;
     right: 0;
     box-shadow: 0 20px 62px rgba(4, 20, 69, .1);
 }
+
 .dark .submenu li a {
     color: #fdfffc;
     text-decoration: none;
     transition: all .75s;
 }
+
 .dark .submenu li a:hover {
     color: #fb811e;
 }
+
 .dark .card {
     background-color: #222222;
     color: white;
 }
+
 .dark .farm-text {
     color: #000;
 }
+
 .dark .carousel__content h3 {
     color: #fdfffc;
 }
-.dark .carousel__content p{
+
+.dark .carousel__content p {
     color: #b7b7ae;
 }
+
 .dark .feature__left .large__title {
     color: #eee;
 }
-.dark .feature__left p{
+
+.dark .feature__left p {
     color: #b7b7ae;
 }
-.dark .feature__right .feature__item{
+
+.dark .feature__right .feature__item {
     padding: 40px 30px;
     border-radius: 30px;
     text-align: center;
@@ -606,10 +715,12 @@ nav ul li {
     background-color: #222222;
     transition: all .75s;
 }
+
 .dark .feature__right .feature__item:hover {
     transition: all .3s;
     box-shadow: 0 25px 98px 0 rgb(0 0 0 / 20%);
 }
+
 .dark .feature__item a {
     font-size: 20px;
     line-height: 28px;
@@ -620,24 +731,29 @@ nav ul li {
     text-decoration: none;
     transition: all .75s;
 }
+
 .dark .feature__item a:hover {
     color: #009f4d;
-    
+
 }
+
 .dark .service-details h5 a {
     text-decoration: none;
     display: block;
     font-size: 24px;
     line-height: 30px;
     font-weight: 600;
-    color:#fdfffc;
+    color: #fdfffc;
     margin: 15px 0;
     transition: all .75s;
 }
+
 .dark .service-details h5 a:hover {
     color: #009f4d;
 }
+
 .dark .service-details p {
     color: #b7b7ae;
 }
+
 /* /Dark theme */
