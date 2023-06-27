@@ -832,10 +832,10 @@ p {
   border: 1px solid transparent;
   padding: 2rem 1rem;
   /* background: #fafafa; */
-  transition: 0.3s ease-in;
+  transition: 0.5s ease-in;
 }
 .option .option__container:hover {
-  border: 1px solid #eee;
+  border: 0.5px solid #eee;
   transition: 0.3s ease-in;
   box-shadow: -1px 2px 12px -9px rgb(0 0 0 / 41%);
   background: #fff;
@@ -845,6 +845,13 @@ p {
   line-height: 25px;
   font-weight: 600;
   color: #060606;
+  transition: all .5s;
+}
+.option .option__content h4:hover{
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 600;
+  color:#009f4d;
 }
 /* GALLERY  */
 .gallery .gallery__effect {
@@ -1102,7 +1109,7 @@ footer ul li a:hover {
 .dark#myBody {
   background-color: #222222;
 }
-
+/* header */
 .dark#myBody .nav-fixed {
   z-index: 99;
   background-color: #222222;
@@ -1159,7 +1166,7 @@ footer ul li a:hover {
   background-color: #222222;
   color: white;
 }
-
+/* carousel */
 .dark .farm-text {
   color: #000;
 }
@@ -1171,7 +1178,7 @@ footer ul li a:hover {
 .dark .carousel__content p {
   color: #b7b7ae;
 }
-
+/* feature */
 .dark .feature__left .large__title {
   color: #eee;
 }
@@ -1208,7 +1215,7 @@ footer ul li a:hover {
 .dark .feature__item a:hover {
   color: #009f4d;
 }
-
+/* service */
 .dark .service-details {
   background: #222222;
   padding: 30px 20px;
@@ -1237,5 +1244,46 @@ footer ul li a:hover {
 .dark .service-details p {
   color: #b7b7ae;
 }
-
+/* whychooseus */
+.dark .whychooseus__left .small-title{
+  color: #fb811e;
+}
+.dark .whychooseus__left .title-style{
+  color: #f4f4f4;
+}
+.dark .detail h4{
+  color: #f4f4f4;
+}
+/* option */
+.dark .option .option__container:hover {
+  border: 0.5px solid #aaa;
+  transition: 0.3s ease-in;
+  box-shadow: -1px 2px 12px -9px rgb(0 0 0 / 41%);
+  background:#222222;
+}
+.dark .option .option__content h4 {
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 600;
+  color: #f4f4f4;
+  transition: all .5s;
+}
+.dark .option .option__content h4:hover{
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 600;
+  color:#009f4d;
+}
+/* gallery */
+.dark .gallery .title{
+  color: #f4f4f4;
+}
+/* footer */
+.dark footer h3 {
+  color: #f4f4f4;
+}
+.dark footer .subscribe input{
+  background-color: #000;
+  border-color: #222222;
+}
 /* /Dark theme */
