@@ -403,7 +403,7 @@ nav ul li {
   background: #fb811e;
   opacity: 1;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2040px) {
   .carousel__left {
     left: 10em;
   }
